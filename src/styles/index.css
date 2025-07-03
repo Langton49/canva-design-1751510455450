@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+:root {
+  --color-green: #184336;
+  --color-yellow: #FFC500;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+  background: var(--color-green);
+  color: var(--color-white);
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  border: none;
+}
+
+/* Remove focus outlines, but customize for accessibility */
+button:focus {
+  outline: 2px solid var(--color-yellow);
+  outline-offset: 2px;
+}
+
+@media (max-width: 900px) {
+  .hero-section,
+  .contact-section {
+    flex-direction: column-reverse;
+  }
+  .hero-content,
+  .contact-content {
+    padding: 32px 20px 0 20px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .speakers-list {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .speaker-card {
+    max-width: 370px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 599px) {
+  .hero-title {
+    font-size: 2.1rem !important;
+  }
+  .speakers-heading {
+    font-size: 1.4rem !important;
+  }
+  .contact-title {
+    font-size: 1.25rem !important;
+  }
+  .hero-section,
+  .contact-section {
+    padding: 0 !important;
+  }
+  .hero-content,
+  .contact-content {
+    padding: 24px 10px 0 10px !important;
+  }
+  .hero-btn,
+  .contact-btn {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}
